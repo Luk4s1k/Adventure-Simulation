@@ -1,4 +1,7 @@
 package simulation.inventory;
 
-public class Item {
+public abstract class Item {
+
+    public void createItem(){};
+    public void createRandomItem(){};
 }
