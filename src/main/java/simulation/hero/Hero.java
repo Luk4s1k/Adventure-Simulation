@@ -17,7 +17,8 @@ public class Hero {
 
     public Hero(){
         Random random = new Random();
-        this.health = random.nextInt(200) + 50;
+        this.isDead = false;
+        this.health = random.nextInt(100) + 50;
         weaponChoice();
         armorChoice();
         this.level = random.nextInt(20);
@@ -93,16 +94,14 @@ public class Hero {
 
     public float getExperiance(){return this.experiance;}
     public int getLevel(){ return this.level; }
-    public float getHealth(){
-        return this.health;
-    }
+    public float getHealth(){ return this.health; }
 
     public boolean isDead(){
         return this.isDead;
     }
 
-    public void setIsDead(boolean state){
-        this.isDead = state;
+    public void killed(){
+        this.isDead = true;
     }
     }
 

@@ -29,8 +29,9 @@ public class WeaponFactory extends ItemFactory {
 
     public Weapon createRandomWeapon(){
         Random random = new Random();
+        int rand = random.nextInt(5);
         Weapon weapon = null;
-        switch(random.nextInt(5)){
+        switch(rand){
             case 1: weapon = new Weapon(WeaponType.Axe);
                 break;
             case 2: weapon = new Weapon(WeaponType.Dagger);

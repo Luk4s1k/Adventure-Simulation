@@ -11,7 +11,7 @@ public abstract class Enemy {
     public Enemy(){
         Random rand = new Random();
         this.level = rand.nextInt(11) + 1;
-        this.health = this.level * 2;
+        this.health = this.level * 3;
     }
 
     public abstract int getLevel();
