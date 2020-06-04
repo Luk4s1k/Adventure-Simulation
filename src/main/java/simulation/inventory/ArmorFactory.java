@@ -3,7 +3,7 @@ package simulation.inventory;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ArmorFactory extends ItemFactory {
+public class ArmorFactory{
 
 
     public Armor createArmor(){
@@ -30,7 +30,7 @@ public class ArmorFactory extends ItemFactory {
         return armor;
     }
 
-    public Item createRandomArmor(){
+    public Armor createRandomArmor(){
         Random random = new Random();
         Armor armor = null;
         switch(random.nextInt(5)){

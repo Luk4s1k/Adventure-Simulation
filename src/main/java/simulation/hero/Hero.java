@@ -10,7 +10,7 @@ public class Hero {
 
     private float health;
     private Weapon weapon;
-    private Item armor;
+    private Armor armor;
     private int level;
     private float experiance;
     private boolean isDead;
