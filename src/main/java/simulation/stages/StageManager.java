@@ -9,6 +9,7 @@ public class StageManager {
     public Stage spiderNest;
 
     public  StageManager(){
+
         StageFactory stageFactory = new StageFactory();
         goblinCave = stageFactory.createStage(StageType.GoblinCave);
         graveyard = stageFactory.createStage(StageType.Graveyard);
@@ -17,11 +18,13 @@ public class StageManager {
 
     }
 
-    public void activateStage(Stage stage){
-        stage.setisActive(true);
+    public void enterStage(Stage stage){
+        System.out.println("You entered " + stage.name);
     }
 
-    public void deactivateStage(Stage stage){
-        stage.setisActive(false);
+    public void exitStage(Stage stage){
+        System.out.println("You are leaving " + stage.name);
     }
+
+
 }

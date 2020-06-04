@@ -6,6 +6,7 @@ public abstract class Enemy {
     protected int level;
     protected int health;
     protected boolean isDead;
+    protected String name;
 
     public Enemy(){
         Random rand = new Random();
@@ -17,4 +18,5 @@ public abstract class Enemy {
     public abstract int getHealth();
     public abstract void reduceHealth(int damage);
     public abstract boolean isDead();
+    public abstract String getName();
 }

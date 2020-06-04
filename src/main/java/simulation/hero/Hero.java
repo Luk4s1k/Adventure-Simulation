@@ -5,35 +5,32 @@ import simulation.enemies.Enemy;
 import simulation.inventory.*;
 import java.util.Scanner;
 
-import java.util.*;
-
-
 
 public class Hero {
 
-    private double health;
+    private float health;
     private Weapon weapon;
     private Item armor;
     private int level;
-    private int experiance;
+    private float experiance;
     private boolean isDead;
 
     public Hero(){
         Random random = new Random();
         this.health = random.nextInt(200) + 50;
-        weaponChoise();
-        armorChoise();
+        weaponChoice();
+        armorChoice();
         this.level = random.nextInt(20);
         this.experiance = 0;
         printInfo();
     }
 
-    public void weaponChoise() {
+    public void weaponChoice() {
         System.out.println("Do you want custom weapon(press 1) or random (press 2)? ");
         Scanner in_w = new Scanner(System.in);
         String input_w = in_w.nextLine();
-        int choise_w = Integer.parseInt(input_w);
-        switch (choise_w) {
+        int choice_w = Integer.parseInt(input_w);
+        switch (choice_w) {
             case 1:
                 this.weapon = new WeaponFactory().createWeapon();
                 break;
@@ -44,12 +41,12 @@ public class Hero {
     }
 
 
-        public void armorChoise(){
+        public void armorChoice(){
             System.out.println("Do you want custom armor(press 1) or random(press 2)? ");
             Scanner in_a = new Scanner(System.in);
             String input_a = in_a.nextLine();
-            int choise_a = Integer.parseInt(input_a);
-            switch(choise_a){
+            int choice_a = Integer.parseInt(input_a);
+            switch(choice_a){
                 case 1: this.armor = new ArmorFactory().createArmor();
                     break;
                 case 2: this.armor = new ArmorFactory().createRandomArmor();
@@ -69,23 +66,43 @@ public class Hero {
         }
 
         public void attacks(Enemy enemy){
-            enemy.reduceHealth(this.weapon.getDamage());
+        System.out.println("Hero attacks " + enemy.getName() + " lvl(" + enemy.getLevel() + ")");
+        enemy.reduceHealth(this.weapon.getDamage() + this.getLevel());
+        System.out.println("Hero dealt " + (this.weapon.getDamage() + this.getLevel()) + " damage");
+
         }
 
         public void attackedBy(Enemy enemy){
-            this.health = this.health - ((enemy.getLevel() * 2) * this.armor.getResistance());
+            System.out.println(enemy.getName() + " attacks hero");
+            this.health = (float) (this.health - ((enemy.getLevel() * 2) * this.armor.getResistance()));
+            System.out.println("Hero got " + (int)((enemy.getLevel() * 2) * this.armor.getResistance()) + " damage");
         }
 
-        public double getHealth(){
-            return this.health;
+
+
+        public void addExperience(int amount){
+            this.experiance += amount;
         }
 
-        public boolean isDead(){
-            return this.isDead;
+        public void levelUp(){
+            if(this.experiance >= 10){
+                int levelUp = (int)experiance/10;
+                this.level += levelUp;
+                this.experiance = experiance%10;}
         }
 
-        public void setIsDead(boolean state){
-            this.isDead = state;
-        }
+    public float getExperiance(){return this.experiance;}
+    public int getLevel(){ return this.level; }
+    public float getHealth(){
+        return this.health;
+    }
+
+    public boolean isDead(){
+        return this.isDead;
+    }
+
+    public void setIsDead(boolean state){
+        this.isDead = state;
+    }
     }
 

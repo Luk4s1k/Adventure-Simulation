@@ -4,7 +4,8 @@ public class Skeleton extends Enemy {
 
 
     public Skeleton(){
-        System.out.println("Skeleton was spawned hp(" + getHealth() + ") lvl(" + getLevel() + ")");
+        this.name = "Skeleton";
+        System.out.println("Skeleton was spawned : hp(" + getHealth() + ") lvl(" + getLevel() + ")");
     }
 
 
@@ -26,5 +27,10 @@ public class Skeleton extends Enemy {
     @Override
     public boolean isDead() {
         return false;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 }

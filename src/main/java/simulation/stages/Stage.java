@@ -18,13 +18,5 @@ public class Stage {
         return this.isActive;
     };
 
-    public void setisActive(boolean state){
-        this.isActive = state;
-        if (state) {
-            System.out.println("You entered" + this.name);
-        }
-        else {
-            System.out.println("You are leaving" + this.name);
-        }
-    }
+
 }

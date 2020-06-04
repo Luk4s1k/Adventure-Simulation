@@ -5,6 +5,7 @@ public class Goblin extends Enemy{
 
 
     public Goblin(){
+        this.name = "Goblin";
         System.out.println("Goblin was spawned : hp(" + getHealth() + ") lvl(" + getLevel() + ")");
     }
 
@@ -27,5 +28,10 @@ public class Goblin extends Enemy{
     @Override
     public boolean isDead() {
         return false;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 }

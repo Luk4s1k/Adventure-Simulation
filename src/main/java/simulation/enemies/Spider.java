@@ -4,7 +4,8 @@ public class Spider extends Enemy{
 
 
     public Spider(){
-        System.out.println("Spider was spawned hp(" + getHealth() + ") lvl(" + getLevel() + ")");
+        this.name = "Spider";
+        System.out.println("Spider was spawned : hp(" + getHealth() + ") lvl(" + getLevel() + ")");
     }
 
 
@@ -26,5 +27,10 @@ public class Spider extends Enemy{
     @Override
     public boolean isDead() {
         return false;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 }
