@@ -16,7 +16,9 @@ public abstract class Enemy {
 
     public abstract int getLevel();
     public abstract int getHealth();
-    public abstract void reduceHealth(int damage);
-    public abstract boolean isDead();
     public abstract String getName();
+    public abstract boolean isDead();
+    public abstract void reduceHealth(int damage);
+
+
 }
