@@ -3,35 +3,44 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class WeaponFactory extends ItemFactory {
-    public Item createWeapon(){
-        Item item = null;
+
+    public Weapon createWeapon(){
+        Weapon weapon = null;
         System.out.println("Choose your weapon : Axe(1), Dagger(2), Spear(3), Sword(4)");
         Scanner in = new Scanner(System.in);
         String input = in.nextLine();
         int weaponType = Integer.parseInt(input);
         switch(weaponType){
             case 1:
-                item = new Weapon(WeaponType.Axe);
+                weapon = new Weapon(WeaponType.Axe);
+                break;
             case 2:
-                item = new Weapon(WeaponType.Dagger);
+                weapon = new Weapon(WeaponType.Dagger);
+                break;
             case 3:
-                item = new Weapon(WeaponType.Spear);
+                weapon = new Weapon(WeaponType.Spear);
+                break;
             case 4:
-                item = new Weapon(WeaponType.Sword);
+                weapon = new Weapon(WeaponType.Sword);
+                break;
         }
-        return item;
+        return weapon;
     }
 
-    public Item createRandomWeapon(){
+    public Weapon createRandomWeapon(){
         Random random = new Random();
-        Item item = null;
+        Weapon weapon = null;
         switch(random.nextInt(5)){
-            case 1: item = new Weapon(WeaponType.Axe);
-            case 2: item = new Weapon(WeaponType.Dagger);
-            case 3: item = new Weapon(WeaponType.Spear);
-            case 4: item = new Weapon(WeaponType.Sword);
+            case 1: weapon = new Weapon(WeaponType.Axe);
+                break;
+            case 2: weapon = new Weapon(WeaponType.Dagger);
+                break;
+            case 3: weapon = new Weapon(WeaponType.Spear);
+                break;
+            case 4: weapon = new Weapon(WeaponType.Sword);
+                break;
         }
-        return item;
+        return weapon;
     }
 
 }

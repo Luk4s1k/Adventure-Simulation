@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class ArmorFactory extends ItemFactory {
 
 
-    public Item createArmor(){
-        Item item = null;
+    public Armor createArmor(){
+        Armor armor = null;
         System.out.println("Choose your weapon : Light(1), Medium(2) ,Heavy(3), Magic(4)");
         Scanner in = new Scanner(System.in);
         String input = in.nextLine();
@@ -15,26 +15,34 @@ public class ArmorFactory extends ItemFactory {
 
         switch(armorType){
             case 1:
-                item = new Armor(ArmorType.Light);
+                armor = new Armor(ArmorType.Light);
+                break;
             case 2:
-                item = new Armor(ArmorType.Medium);
+                armor = new Armor(ArmorType.Medium);
+                break;
             case 3:
-                item = new Armor(ArmorType.Heavy);
+                armor = new Armor(ArmorType.Heavy);
+                break;
             case 4:
-                item = new Armor(ArmorType.Magic);
+                armor = new Armor(ArmorType.Magic);
+                break;
         }
-        return item;
+        return armor;
     }
 
     public Item createRandomArmor(){
         Random random = new Random();
-        Item item = null;
+        Armor armor = null;
         switch(random.nextInt(5)){
-            case 1: item = new Armor(ArmorType.Light);
-            case 2: item = new Armor(ArmorType.Medium);
-            case 3: item = new Armor(ArmorType.Heavy);
-            case 4: item = new Armor(ArmorType.Magic);
+            case 1: armor = new Armor(ArmorType.Light);
+                break;
+            case 2: armor = new Armor(ArmorType.Medium);
+                break;
+            case 3: armor = new Armor(ArmorType.Heavy);
+                break;
+            case 4: armor = new Armor(ArmorType.Magic);
+                break;
         }
-        return item;
+        return armor;
     }
 }
