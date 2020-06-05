@@ -3,6 +3,10 @@ package simulation.stages;
 import simulation.stages.*;
 import java.util.*;
 
+/**
+ * includes the stages created by the stageFactory
+ * user is informed when he enters the stage and when is exits it
+ */
 public class StageManager {
     public Stage goblinCave;
     public Stage graveyard;

@@ -5,6 +5,12 @@ import simulation.enemies.*;
 
 import java.util.*;
 
+/**
+ * creates an entity of the Goblin cave
+ * and fills up the enemy list via cycle calling the enemyFactory to
+ * create enemy entities based on the Stage
+ * and informs the user that the entity was created
+ */
 public class GoblinCave extends Stage{
 
 

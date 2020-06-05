@@ -1,5 +1,6 @@
 package simulation.inventory;
 
+
 public abstract class Item {
 
     public void createItem(){};

@@ -1,5 +1,9 @@
 package simulation.enemies;
 
+/**
+ * When entity is created put info to the console to inform the user
+ *  * Info provided : name, health and level of the created entity
+ */
 public class Spider extends Enemy{
 
 

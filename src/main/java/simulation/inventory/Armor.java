@@ -1,14 +1,20 @@
 package simulation.inventory;
+
 import java.util.Random;
 
+/**
+ * creates an entity based of inserted armorType
+ * varies between Ligh, Medium, Heavy or Magic armor
+ * overrides getters from the super class Item
+ */
 public class Armor extends Item {
     protected String name;
     protected int level;
     protected double resistance;
 
-    public Armor(ArmorType armorType){
+    public Armor(ArmorType armorType) {
         Random random = new Random();
-        switch(armorType){
+        switch (armorType) {
             case Light:
                 this.name = "Ligh Armor";
                 this.resistance = 0.2;

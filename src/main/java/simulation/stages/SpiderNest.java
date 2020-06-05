@@ -4,6 +4,12 @@ import simulation.enemies.EnemyFactory;
 import simulation.enemies.EnemyType;
 import java.util.*;
 
+/**
+ * creates an entity of the Spider Nest
+ * and fills up the enemy list via cycle calling the enemyFactory to
+ * create enemy entities based on the Stage
+ * and informs the user that the entity was created
+ */
 public class SpiderNest extends Stage {
 
     public SpiderNest(){
