@@ -4,6 +4,12 @@ import java.util.*;
 import simulation.enemies.EnemyFactory;
 import simulation.enemies.EnemyType;
 
+/**
+ * creates an entity of the Graveyard
+ * and fills up the enemy list via cycle calling the enemyFactory to
+ * create enemy entities based on the Stage
+ * and informs the user that the entity was created
+ */
 public class Graveyard extends Stage{
 
     public Graveyard(){

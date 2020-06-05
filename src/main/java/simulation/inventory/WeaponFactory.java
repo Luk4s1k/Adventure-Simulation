@@ -2,7 +2,12 @@ package simulation.inventory;
 import java.util.Random;
 import java.util.Scanner;
 
-public class WeaponFactory extends ItemFactory {
+/**
+ * provides user with message to choose the weapon if his previous choice
+ * was to create a custom weapon and creates a random entity if user had chosen
+ *  a random entity creation before
+ */
+public class WeaponFactory{
 
     public Weapon createWeapon(){
         Weapon weapon = null;
@@ -28,9 +33,9 @@ public class WeaponFactory extends ItemFactory {
     }
 
     public Weapon createRandomWeapon(){
+        Weapon weapon = null;
         Random random = new Random();
         int rand = random.nextInt(5);
-        Weapon weapon = null;
         switch(rand){
             case 1: weapon = new Weapon(WeaponType.Axe);
                 break;

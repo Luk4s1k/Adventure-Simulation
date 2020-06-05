@@ -1,6 +1,11 @@
 package simulation.inventory;
 import java.util.Random;
 
+/**
+ * creates an entity based of inserted weaponType
+ *   varies between Axe , Dagger , Spear and Sword
+ *   overrides getters from the super class Item
+ */
 public class Weapon extends Item {
     protected String name;
     protected int level;

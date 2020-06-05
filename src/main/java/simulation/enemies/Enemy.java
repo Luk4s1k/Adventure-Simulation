@@ -2,7 +2,15 @@ package simulation.enemies;
 
 import java.util.Random;
 
+/**
+ * This class creates an enemy entity
+ * level is generated randomly from 1-11
+ * health parameter is based on the level
+ * reduce health method used is derived classes as well as
+ * other getters
+ */
 public abstract class Enemy {
+
     protected int level;
     protected int health;
     protected boolean isDead;

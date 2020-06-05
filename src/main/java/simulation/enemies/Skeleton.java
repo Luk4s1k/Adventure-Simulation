@@ -1,9 +1,13 @@
 package simulation.enemies;
 
+/**
+ * When entity is created put info to the console to inform the user
+ *  * Info provided : name, health and level of the created entity
+ */
 public class Skeleton extends Enemy {
 
 
-    public Skeleton(){
+    public Skeleton() {
         this.name = "Skeleton";
         System.out.println("Skeleton was spawned : hp(" + getHealth() + ") lvl(" + getLevel() + ")");
     }

@@ -3,7 +3,12 @@ package simulation.inventory;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ArmorFactory extends ItemFactory {
+/**
+ * provides user with message to choose the armor if his previous choice
+ * was to create a custom armor and creates a random entity if user had chosen
+ * a random entity creation before
+ */
+public class ArmorFactory{
 
 
     public Armor createArmor(){
@@ -30,7 +35,7 @@ public class ArmorFactory extends ItemFactory {
         return armor;
     }
 
-    public Item createRandomArmor(){
+    public Armor createRandomArmor(){
         Random random = new Random();
         Armor armor = null;
         switch(random.nextInt(5)){

@@ -2,7 +2,11 @@ package simulation.enemies;
 import simulation.enemies.Goblin;
 
 
-
+/**
+ * Factory pattern used to create specified
+ * Enemy entities such as Goblin Skeleton and Spider
+ * createEnemy function should get the enum of enemyType
+ */
 public class EnemyFactory {
 
 

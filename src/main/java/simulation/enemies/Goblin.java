@@ -1,6 +1,10 @@
 package simulation.enemies;
 import java.util.Random;
 
+/**
+ * When entity is created put info to the console to inform the user
+ * Info provided : name, health and level of the created entity
+ */
 public class Goblin extends Enemy{
 
 
