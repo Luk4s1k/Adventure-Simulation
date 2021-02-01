@@ -9,3 +9,5 @@ You can choose the type of weapon you want to use as well as the armor.
  
 ## How to use
 You simply need to run the PlayStage.java file in src/main/java/simulation folder.
+ ## Class Diagram
+ ![alt text](https://github.com/Luk4s1k/Adventure-Simulation/blob/master/Documentation/Class-Diagram-v2.pdf)
